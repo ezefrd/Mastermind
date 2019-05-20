@@ -14,4 +14,13 @@ public class CodeMaker {
 
         return String.format("[%d,%d]",rightColourAndPosition, rightColourAndNotPosition);
     }
+
+    public String evaluates(CodeBreakerPlay codeBreakerPlay, CodeMakerResultPresenter codeMakerResultPresenter) {
+        Integer rightColourAndPosition = codeBreakerPlay.evaluatesColourAndPosition(this.pegs);
+        Integer rightColourAndNotPosition = codeBreakerPlay.evaluatesColourAndNotPosition(this.pegs);
+
+        CodeMakerResult codeMakerResult = new CodeMakerResult(rightColourAndPosition, rightColourAndNotPosition);
+
+        return codeMakerResultPresenter.render(codeMakerResult);
+    }
 }
