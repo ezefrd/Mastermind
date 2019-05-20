@@ -13,4 +13,15 @@ public class CodeMakerTest {
         //then:
         Assert.assertEquals("[1,0]", checkResultAsString);
     }
+
+    @Test
+    public void test_code_maker_checks_a_solution_that_is_all_fine_for_four_peg(){
+        //setup:
+        CodeMaker codeMaker = new CodeMaker(new Red(), new Blue(), new Green(), new Yellow());
+        CodeBreakerPlay codeBreakerPlay = new CodeBreakerPlay(new Red(), new Blue(), new Green(), new Yellow());
+        //when
+        String checkResultAsString = codeMaker.evaluates(codeBreakerPlay);
+        //then:
+        Assert.assertEquals("[4,0]", checkResultAsString);
+    }
 }
