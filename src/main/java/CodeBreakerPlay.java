@@ -8,4 +8,8 @@ public class CodeBreakerPlay {
     public Integer evaluatesColourAndPosition(Pegs pegs) {
         return pegs.evaluatesColourAndPosition(this.pegs);
     }
+
+    public Integer evaluatesColourAndNotPosition(Pegs pegs) {
+        return pegs.evaluatesColourAndNotPosition(this.pegs);
+    }
 }

@@ -10,7 +10,8 @@ public class CodeMaker {
 
     public String evaluates(CodeBreakerPlay codeBreakerPlay) {
         Integer rightColourAndPosition = codeBreakerPlay.evaluatesColourAndPosition(this.pegs);
+        Integer rightColourAndNotPosition = codeBreakerPlay.evaluatesColourAndNotPosition(this.pegs);
 
-        return String.format("[%d,%d]",rightColourAndPosition, 0);
+        return String.format("[%d,%d]",rightColourAndPosition, rightColourAndNotPosition);
     }
 }

@@ -35,4 +35,15 @@ public class CodeMakerTest {
         //then:
         Assert.assertEquals("[0,0]", checkResultAsString);
     }
+
+    @Test
+    public void test_code_maker_checks_a_solution_that_has_two_pegs_full_ok_and_two_partially_ok(){
+        //setup:
+        CodeMaker codeMaker = new CodeMaker(new Red(), new Blue(), new Green(), new Yellow());
+        CodeBreakerPlay codeBreakerPlay = new CodeBreakerPlay(new Red(), new Blue(), new Yellow(), new Green());
+        //when
+        String checkResultAsString = codeMaker.evaluates(codeBreakerPlay);
+        //then:
+        Assert.assertEquals("[2,2]", checkResultAsString);
+    }
 }
