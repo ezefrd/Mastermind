@@ -1,3 +1,5 @@
+package business.codemaker;
+
 //This class works as DTO. It must have no business logic
 public class CodeMakerResult {
     private Integer rightColourAndPosition;

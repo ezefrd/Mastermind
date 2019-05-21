@@ -1,4 +1,8 @@
-import java.util.ArrayList;
+package business.codemaker;
+
+import business.pegs.Peg;
+import business.pegs.Pegs;
+import presenters.CodeMakerResultPresenter;
 
 public class CodeMaker {
 

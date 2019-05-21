@@ -1,3 +1,8 @@
+package business.codemaker;
+
+import business.pegs.Peg;
+import business.pegs.Pegs;
+
 public class CodeBreakerPlay {
     private Pegs pegs;
 
