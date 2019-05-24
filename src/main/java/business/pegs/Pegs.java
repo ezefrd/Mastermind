@@ -11,6 +11,13 @@ public class Pegs {
         this.pegs = new ArrayList<>(Arrays.asList(pegs));
     }
 
+    public Pegs(ArrayList<Peg> pegs){
+        this.pegs = pegs;
+    }
+
+
+
+
     public Integer evaluatesColourAndPosition(Pegs pegs) {
         Integer rightColourAndPosition = 0;
 

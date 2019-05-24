@@ -10,6 +10,10 @@ public class CodeBreakerPlay {
         this.pegs = new Pegs(pegs);
     }
 
+    public CodeBreakerPlay(Pegs  pegs){
+        this.pegs = pegs;
+    }
+
     public Integer evaluatesColourAndPosition(Pegs pegs) {
         return pegs.evaluatesColourAndPosition(this.pegs);
     }
