@@ -25,4 +25,13 @@ public class CodeMakerController {
 
         return mockedCodeMaker.evaluates(codeBreakerPlay, new ColourResultPresenter());
     }
+
+    @PostMapping(value = "/codemaker")
+    public String commonGame(@RequestBody CodeMakerDto codeMakerDto)
+            throws InstantiationException, IllegalAccessException {
+        CodeMaker codeMaker = new CodeMaker(pegsFactory.createPegs(codeMakerDto.codeMakerPegs));
+        CodeBreakerPlay codeBreakerPlay = new CodeBreakerPlay(pegsFactory.createPegs(codeMakerDto.codeBreakerPegs));
+
+        return codeMaker.evaluates(codeBreakerPlay, new ColourResultPresenter());
+    }
 }

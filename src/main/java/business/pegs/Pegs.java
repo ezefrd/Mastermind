@@ -37,10 +37,10 @@ public class Pegs {
 
     public Integer evaluatesColourAndNotPosition(Pegs pegs) {
         Integer rightColourAndNotPosition = 0;
-        for (int ix = 0; ix < this.pegs.size(); ix++) {
-            Peg pegToCompare = pegs.obtainInPosition(ix);
+        for (int ix = 0; ix < pegs.pegs.size(); ix++) {
+            Peg pegToCompare = this.obtainInPosition(ix);
 
-            if (this.isPartiallyOk(ix, pegToCompare)) {
+            if (pegs.isPartiallyOk(ix, pegToCompare)) {
                 rightColourAndNotPosition++;
             }
         }

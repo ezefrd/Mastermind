@@ -15,4 +15,10 @@ public class CodeMakerDto {
         this.codeBreakerPegs.add(pegColour);
         return this;
     }
+
+    public CodeMakerDto addPegsToCodeMaker(String pegColour){
+        this.codeMakerPegs.add(pegColour);
+        return this;
+    }
+
 }

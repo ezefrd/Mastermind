@@ -12,6 +12,10 @@ public class CodeMaker {
         this.pegs = new Pegs(pegs);
     }
 
+    public CodeMaker(Pegs pegs){
+        this.pegs = pegs;
+    }
+
     public String evaluates(CodeBreakerPlay codeBreakerPlay) {
         Integer rightColourAndPosition = codeBreakerPlay.evaluatesColourAndPosition(this.pegs);
         Integer rightColourAndNotPosition = codeBreakerPlay.evaluatesColourAndNotPosition(this.pegs);
