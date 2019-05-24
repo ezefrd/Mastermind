@@ -2,6 +2,7 @@ package business.pegs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Pegs {
 
@@ -14,9 +15,6 @@ public class Pegs {
     public Pegs(ArrayList<Peg> pegs){
         this.pegs = pegs;
     }
-
-
-
 
     public Integer evaluatesColourAndPosition(Pegs pegs) {
         Integer rightColourAndPosition = 0;
@@ -61,5 +59,18 @@ public class Pegs {
         }
 
         return false;
+    }
+
+    @Override public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Pegs pegs1 = (Pegs) o;
+        return Objects.equals(pegs, pegs1.pegs);
+    }
+
+    @Override public int hashCode() {
+        return Objects.hash(pegs);
     }
 }
