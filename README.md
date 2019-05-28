@@ -74,3 +74,7 @@ A example of the body for the POST:
 	["pink","red","pink","blue"]
 }
 ```
+
+### Missing
+
+I didn´t made request validations, for example I didn´t validate if the codeBreakerPegs and codeMakerPegs are of the same size.. so this solution could be improved adding some validations and maybe returning a Bad Request when something like the recently commented happen.
