@@ -27,6 +27,12 @@ are:
 ### Return feedback given a code guess
 ### Check game historic (optional, actually is a role of the board not the codemaker)
 
+### To start the application:
+
+```
+gradle bootrun
+```
+
 ## Endpoints
 
 ### /codemaker/mocked 
